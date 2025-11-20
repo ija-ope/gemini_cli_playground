@@ -1,0 +1,7 @@
+This file explains the steps taken to automate the archiving of screenshots.
+
+1.  **Created a destination folder:** A folder named 'old files' was created in the Documents directory to store the archived screenshots.
+
+2.  **Wrote a shell script:** A shell script named 'organize_screenshots.sh' was created. This script finds all files on the Desktop that match the pattern 'Screenshot*.png' and are more than a day old, and then moves them to the '~/Documents/old files/' directory.
+
+3.  **Scheduled a CRON job:** A CRON job was set up to run the 'organize_screenshots.sh' script automatically every day at midnight. This ensures that screenshots are continuously archived without any manual intervention.
