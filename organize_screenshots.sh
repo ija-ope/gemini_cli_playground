@@ -1,2 +1,2 @@
 #!/bin/bash
-find ~/Desktop -name "Screenshot*.png" -mtime +1 -exec mv {} ~/Documents/old\ files/ \;
+find /Users/mac/Desktop -name "Screenshot*.png" -mtime +1 -exec mv {} /Users/mac/Documents/old\ files/ \;
