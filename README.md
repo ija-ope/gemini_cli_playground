@@ -10,6 +10,22 @@ The system is composed of two main parts:
 
 ---
 
+## Deployment to Render
+
+This application is configured for easy deployment to **Render**, a platform for hosting web applications.
+
+1.  **Create a Render Account:** If you don't have one, sign up at [render.com](https://render.com/).
+2.  **Create a New Blueprint Service:**
+    *   On your Render Dashboard, click **New +** and select **Blueprint**.
+    *   Connect your GitHub account and select the `gemini_cli_playground` repository.
+    *   Render will automatically detect the `render.yaml` file.
+    *   Give your service a name and click **Apply**.
+3.  **Deployment:** Render will then build and deploy your application. Once it's live, you will be given a public URL (e.g., `https://your-service-name.onrender.com`).
+
+**Note:** The public version of this dashboard will not be able to run the archival script or access your local files due to security sandboxing. It will serve as a template and demonstration of the application's UI.
+
+---
+
 ## Dashboard Implementation Walkthrough
 
 The dashboard was built to provide a simple and effective way to visualize the output of our CRON job.
@@ -36,9 +52,10 @@ The frontend is a single HTML file (`templates/dashboard.html`) that is rendered
 
 ## Technologies Used
 
--   **Backend:** Python 3, Flask
+-   **Backend:** Python 3, Flask, Gunicorn
 -   **Frontend:** HTML5, CSS3, JavaScript
 -   **Charting:** Chart.js
+-   **Deployment:** Render
 -   **Automation:** Shell Scripting, CRON
 -   **Version Control:** Git, GitHub
 
@@ -129,3 +146,4 @@ This prompt can be used to guide a sufficiently capable Large Language Model to 
 >     *   Provide clear, final instructions on how to run the application.
 >
 > Execute this plan step-by-step.
+
